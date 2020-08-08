@@ -58,13 +58,13 @@ function generateObstacles() {
     obstacle.style.left = obstaclePosition + 'px';
 
     let timerId = setInterval(function() {
-        if(obstaclePosition > 0 && obstaclePosition < 60 && position < 60) {
+        if (obstaclePosition > 0 && obstaclePosition < 60 && position < 60) {
             clearInterval(timerId);
             alert.innerHTML = 'Game Over';
             isGameOver = true;
 
             // remove all children
-            while(grid.firstChild) {
+            while (grid.firstChild) {
                 grid.removeChild(grid.last);
             }
         }
