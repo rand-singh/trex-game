@@ -14,7 +14,7 @@ function control(e) {
     }
 }
 
-document.addEventListener('keyup', control);
+document.addEventListener('keydown', control);
 
 let position = 0;
 function jump() {
@@ -63,6 +63,10 @@ function generateObstacles() {
             alert.innerHTML = 'Game Over';
             isGameOver = true;
 
+            // remove all children
+            while(grid.firstChild) {
+                grid.removeChild(grid.last);
+            }
         }
 
         obstaclePosition -=10;
